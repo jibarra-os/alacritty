@@ -1,0 +1,162 @@
+# ----------------------------------------------------------#
+#   Title       :   Alacritty Configuration                 #
+#   Author      :   Jaime Ibarra                            #
+#   Date        :   2023-03-14                              #
+#   Description :   This is a personal configuration for    #
+#                   the Alacritty terminal emulator         #
+#   Notes       :   Make sure the file is located at        #
+#                   $HOME/.config/alacritty/alacritty.yml   #
+#-----------------------------------------------------------#
+
+#---------------------------------------#
+#   SECTION 1 - WINDOW CONFIGURATION    #
+#---------------------------------------#
+
+# 1 - Window Configuration
+window:
+  padding:
+    x:  15
+    y:  15
+  class:
+    instance: Alacritty
+    general:  Alacritty
+  opacity:    0.95
+  decorations:  none
+  dimensions:
+    columns:  195
+    lines:    50
+
+
+# 2 - Window Scrolling
+scrolling:
+  history:    1000
+  multiplier: 3
+
+#-----------------------------------------#
+#   SECTION 2 - TERMINAL FONTS            #
+#-----------------------------------------#
+
+font:
+  normal:
+    family: FiraCode Nerd Font Mono
+    style:  Regular
+  bold:
+    family: FiraCode Nerd Font Mono
+    style:  Bold
+  italic:
+    family: FiraCode Nerd Font Mono
+    style:  Italic
+  bold_italic:
+    family: FiraCode Nerd Font Mono
+    style:  BoldItalic
+  size: 11
+draw_bold_text_with_bright_colors:  true
+
+#-----------------------------------------#
+#   SECTION 3 - TERMINAL THEMES           #
+#-----------------------------------------#
+
+# Catpuccin - Mocha
+colors:
+  # Default colors
+  primary:
+    background: '#1E1E2E' # base
+    foreground: '#CDD6F4' # text
+    # Bright and dim foreground colors
+    dim_foreground: '#CDD6F4' # text
+    bright_foreground: '#CDD6F4' # text
+
+  # Cursor colors
+  cursor:
+    text: '#1E1E2E' # base
+    cursor: '#F5E0DC' # rosewater
+  vi_mode_cursor:
+    text: '#1E1E2E' # base
+    cursor: '#B4BEFE' # lavender
+
+  # Search colors
+  search:
+    matches:
+      foreground: '#1E1E2E' # base
+      background: '#A6ADC8' # subtext0
+    focused_match:
+      foreground: '#1E1E2E' # base
+      background: '#A6E3A1' # green
+  footer_bar:
+    foreground: '#1E1E2E' # base
+    background: '#A6ADC8' # subtext0
+
+  # Keyboard regex hints
+  hints:
+    start:
+      foreground: '#1E1E2E' # base
+      background: '#F9E2AF' # yellow
+    end:
+      foreground: '#1E1E2E' # base
+      background: '#A6ADC8' # subtext0
+
+  # Selection colors
+  selection:
+    text: '#1E1E2E' # base
+    background: '#F5E0DC' # rosewater
+
+  # Normal colors
+  normal:
+    black:   '#45475A' # surface1
+    red:     '#F38BA8' # red
+    green:   '#A6E3A1' # green
+    yellow:  '#F9E2AF' # yellow
+    blue:    '#89B4FA' # blue
+    magenta: '#F5C2E7' # pink
+    cyan:    '#94E2D5' # teal
+    white:   '#BAC2DE' # subtext1
+
+  # Bright colors
+  bright:
+    black:   '#585B70' # surface2
+    red:     '#F38BA8' # red
+    green:   '#A6E3A1' # green
+    yellow:  '#F9E2AF' # yellow
+    blue:    '#89B4FA' # blue
+    magenta: '#F5C2E7' # pink
+    cyan:    '#94E2D5' # teal
+    white:   '#A6ADC8' # subtext0
+
+  # Dim colors
+  dim:
+    black:   '#45475A' # surface1
+    red:     '#F38BA8' # red
+    green:   '#A6E3A1' # green
+    yellow:  '#F9E2AF' # yellow
+    blue:    '#89B4FA' # blue
+    magenta: '#F5C2E7' # pink
+    cyan:    '#94E2D5' # teal
+    white:   '#BAC2DE' # subtext1
+
+  indexed_colors:
+    - { index: 16, color: '#FAB387' }
+    - { index: 17, color: '#F5E0DC' }
+
+# 2 - Cursor
+cursor:
+  style:
+    shape:  Block
+    blinking: on
+    blink-interval: 750
+    
+selection:
+  save_to_clipboard:  false
+  
+live_config_reload:   true
+
+#-----------------------------------------#
+#   SECTION 4 - ADVANCED CONFIGURATION    #
+#-----------------------------------------#
+
+# 1 - Shell
+shell:
+  program: /usr/bin/zsh
+
+# 2 - Keybindings
+key_bindings:
+  - { key: Return, mods: Super|Shift, action: SpawnNewInstance }

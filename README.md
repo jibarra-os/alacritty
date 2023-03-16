@@ -1,7 +1,9 @@
 # Alacritty Configuration
 Configuration file for Alacritty terminal emulator.
 
-The theme color is based on Catppuccin-Mocha from https://github.com/rajasegar/alacritty-themes/blob/master/themes/Catppuccin-Mocha.yml
+The theme color is hyper and can be found at https://github.com/alacritty/alacritty-theme
+
+To add the theme make sure to create a "theme.yaml" file using the "ln" command
 
 # Requirements
   - Fira Code Font from Nerdfonts, found at https://www.nerdfonts.com/
